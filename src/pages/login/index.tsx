@@ -5,7 +5,7 @@ import { Dispatch } from 'redux';
 import { FormComponentProps } from 'antd/es/form';
 import { connect } from 'dva';
 import { StateType } from './model';
-import LoginComponents from './Login';
+import LoginComponents from './components/Login';
 import styles from './style.less';
 
 const { UserName, Password, Submit } = LoginComponents;
