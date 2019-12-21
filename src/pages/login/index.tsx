@@ -5,7 +5,7 @@ import { Dispatch } from 'redux';
 import { FormComponentProps } from 'antd/es/form';
 import { connect } from 'dva';
 import { StateType } from './model';
-import LoginComponents from './components/Login';
+import LoginComponents from './Login';
 import styles from './style.less';
 
 const { UserName, Password, Submit } = LoginComponents;
@@ -108,7 +108,7 @@ class Login extends Component<LoginProps, LoginState> {
   render() {
     const { userAndlogin, submitting } = this.props;
     const { status, type: loginType } = userAndlogin;
-    const { type, autoLogin } = this.state;
+    const { type } = this.state;
     return (
       <div className={styles.main}>
         <LoginComponents

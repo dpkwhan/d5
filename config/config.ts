@@ -63,18 +63,14 @@ export default {
       component: '../layouts/BlankLayout',
       routes: [
         {
-          path: '/user',
+          path: '/login',
           component: '../layouts/UserLayout',
           routes: [
             {
-              path: '/user',
-              redirect: '/user/login',
-            },
-            {
               name: 'login',
               icon: 'smile',
-              path: '/user/login',
-              component: './user/login',
+              path: '/login',
+              component: './login',
             },
             {
               component: '404',
