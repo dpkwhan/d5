@@ -1,9 +1,9 @@
-export interface VisitDataType {
+export interface IVisitData {
   x: string;
   y: number;
 }
 
-export interface SearchDataType {
+export interface ISearchData {
   index: number;
   keyword: string;
   count: number;
@@ -11,32 +11,32 @@ export interface SearchDataType {
   status: number;
 }
 
-export interface OfflineDataType {
+export interface IOfflineData {
   name: string;
   cvr: number;
 }
 
-export interface OfflineChartData {
+export interface IOfflineChartData {
   x: any;
   y1: number;
   y2: number;
 }
 
-export interface RadarData {
+export interface IRadarData {
   name: string;
   label: string;
   value: number;
 }
 
-export interface AnalysisData {
-  visitData: VisitDataType[];
-  visitData2: VisitDataType[];
-  salesData: VisitDataType[];
-  searchData: SearchDataType[];
-  offlineData: OfflineDataType[];
-  offlineChartData: OfflineChartData[];
-  salesTypeData: VisitDataType[];
-  salesTypeDataOnline: VisitDataType[];
-  salesTypeDataOffline: VisitDataType[];
-  radarData: RadarData[];
+export interface IPerformanceData {
+  visitData: IVisitData[];
+  visitData2: IVisitData[];
+  salesData: IVisitData[];
+  searchData: ISearchData[];
+  offlineData: IOfflineData[];
+  offlineChartData: IOfflineChartData[];
+  salesTypeData: IVisitData[];
+  salesTypeDataOnline: IVisitData[];
+  salesTypeDataOffline: IVisitData[];
+  radarData: IRadarData[];
 }

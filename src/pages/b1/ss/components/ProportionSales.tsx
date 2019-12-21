@@ -1,7 +1,7 @@
 import { Card, Radio } from 'antd';
 import { RadioChangeEvent } from 'antd/es/radio';
 import React from 'react';
-import { VisitDataType } from '../data';
+import { IVisitData } from '../data';
 import { Pie } from './Charts';
 import Yuan from '../utils/Yuan';
 import styles from '../style.less';
@@ -16,7 +16,7 @@ const ProportionSales = ({
   loading: boolean;
   dropdownGroup: React.ReactNode;
   salesType: 'all' | 'online' | 'stores';
-  salesPieData: VisitDataType[];
+  salesPieData: IVisitData[];
   handleChangeSalesType?: (e: RadioChangeEvent) => void;
 }) => (
   <Card

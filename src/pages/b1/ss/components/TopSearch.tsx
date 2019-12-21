@@ -1,7 +1,7 @@
 import { Card, Col, Icon, Row, Table, Tooltip } from 'antd';
 import React from 'react';
 import numeral from 'numeral';
-import { SearchDataType, VisitDataType } from '../data';
+import { ISearchData, IVisitData } from '../data';
 import { MiniArea } from './Charts';
 import NumberInfo from './NumberInfo';
 import Trend from './Trend';
@@ -71,9 +71,9 @@ const TopSearch = ({
   dropdownGroup,
 }: {
   loading: boolean;
-  visitData2: VisitDataType[];
+  visitData2: IVisitData[];
   dropdownGroup: React.ReactNode;
-  searchData: SearchDataType[];
+  searchData: ISearchData[];
 }) => (
   <Card
     loading={loading}

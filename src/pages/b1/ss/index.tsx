@@ -8,7 +8,7 @@ import { RangePickerValue } from 'antd/es/date-picker/interface';
 import { connect } from 'dva';
 import PageLoading from './components/PageLoading';
 import { getTimeDistance } from './utils/utils';
-import { AnalysisData } from './data';
+import { IPerformanceData } from './data';
 import styles from './style.less';
 
 const IntroduceRow = React.lazy(() => import('./components/IntroduceRow'));
@@ -18,7 +18,7 @@ const ProportionSales = React.lazy(() => import('./components/ProportionSales'))
 const OfflineData = React.lazy(() => import('./components/OfflineData'));
 
 interface AnalysisProps {
-  dashboardAndanalysis: AnalysisData;
+  dashboardAndanalysis: IPerformanceData;
   dispatch: Dispatch<any>;
   loading: boolean;
 }

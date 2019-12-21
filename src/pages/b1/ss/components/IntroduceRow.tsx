@@ -2,7 +2,7 @@ import { Col, Icon, Row, Tooltip } from 'antd';
 import React from 'react';
 import numeral from 'numeral';
 import { ChartCard, MiniArea, MiniBar, MiniProgress, Field } from './Charts';
-import { VisitDataType } from '../data';
+import { IVisitData } from '../data';
 import Trend from './Trend';
 import Yuan from '../utils/Yuan';
 import styles from '../style.less';
@@ -18,7 +18,7 @@ const topColResponsiveProps = {
   },
 };
 
-const IntroduceRow = ({ loading, visitData }: { loading: boolean; visitData: VisitDataType[] }) => (
+const IntroduceRow = ({ loading, visitData }: { loading: boolean; visitData: IVisitData[] }) => (
   <Row gutter={24} type="flex">
     <Col {...topColResponsiveProps}>
       <ChartCard

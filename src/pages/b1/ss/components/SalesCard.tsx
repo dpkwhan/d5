@@ -2,7 +2,7 @@ import { Card, Col, DatePicker, Row, Tabs } from 'antd';
 import { RangePickerValue } from 'antd/es/date-picker/interface';
 import React from 'react';
 import numeral from 'numeral';
-import { VisitDataType } from '../data';
+import { IVisitData } from '../data';
 import { Bar } from './Charts';
 import styles from '../style.less';
 
@@ -30,7 +30,7 @@ const SalesCard = ({
 }: {
   rangePickerValue: RangePickerValue;
   isActive: (key: 'today' | 'week' | 'month' | 'year') => string;
-  salesData: VisitDataType[];
+  salesData: IVisitData[];
   loading: boolean;
   handleRangePickerChange: (dates: RangePickerValue, dateStrings: [string, string]) => void;
   selectDate: (key: 'today' | 'week' | 'month' | 'year') => void;

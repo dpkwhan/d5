@@ -1,6 +1,6 @@
 import { Card, Col, Row, Tabs } from 'antd';
 import React from 'react';
-import { OfflineChartData, OfflineDataType } from '../data';
+import { IOfflineChartData, IOfflineData } from '../data';
 import { TimelineChart, Pie } from './Charts';
 import NumberInfo from './NumberInfo';
 import styles from '../style.less';
@@ -9,7 +9,7 @@ const CustomTab = ({
   data,
   currentTabKey: currentKey,
 }: {
-  data: OfflineDataType;
+  data: IOfflineData;
   currentTabKey: string;
 }) => (
   <Row
@@ -58,8 +58,8 @@ const OfflineData = ({
 }: {
   activeKey: string;
   loading: boolean;
-  offlineData: OfflineDataType[];
-  offlineChartData: OfflineChartData[];
+  offlineData: IOfflineData[];
+  offlineChartData: IOfflineChartData[];
   handleTabChange: (activeKey: string) => void;
 }) => (
   <Card
