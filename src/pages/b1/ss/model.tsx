@@ -32,7 +32,6 @@ const initState = {
   salesTypeData: [],
   salesTypeDataOnline: [],
   salesTypeDataOffline: [],
-  radarData: [],
 };
 
 const Model: ModelType = {
