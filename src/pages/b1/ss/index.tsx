@@ -163,7 +163,7 @@ class Analysis extends Component<AnalysisProps, AnalysisState> {
           <Suspense fallback={<PageLoading />}>
             <IntroduceRow loading={loading} visitData={visitData} />
           </Suspense>
-          <Suspense fallback={null}>
+          {/* <Suspense fallback={null}>
             <SalesCard
               rangePickerValue={rangePickerValue}
               salesData={salesData}
@@ -172,14 +172,8 @@ class Analysis extends Component<AnalysisProps, AnalysisState> {
               loading={loading}
               selectDate={this.selectDate}
             />
-          </Suspense>
-          <Row
-            gutter={24}
-            type="flex"
-            style={{
-              marginTop: 24,
-            }}
-          >
+          </Suspense> */}
+          <Row gutter={24} type="flex" style={{ marginTop: 24 }}>
             <Col xl={12} lg={24} md={24} sm={24} xs={24}>
               <Suspense fallback={null}>
                 <TopSearch
@@ -202,7 +196,7 @@ class Analysis extends Component<AnalysisProps, AnalysisState> {
               </Suspense>
             </Col>
           </Row>
-          <Suspense fallback={null}>
+          {/* <Suspense fallback={null}>
             <OfflineData
               activeKey={activeKey}
               loading={loading}
@@ -210,7 +204,7 @@ class Analysis extends Component<AnalysisProps, AnalysisState> {
               offlineChartData={offlineChartData}
               handleTabChange={this.handleTabChange}
             />
-          </Suspense>
+          </Suspense> */}
         </React.Fragment>
       </GridContent>
     );

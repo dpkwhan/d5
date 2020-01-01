@@ -45,10 +45,10 @@ const UserLayout: React.FC<UserLayoutProps> = props => {
             <div className={styles.header}>
               <Link to="/">
                 <img alt="logo" className={styles.logo} src={logo} />
-                <span className={styles.title}>D5 Dashboard</span>
+                <span className={styles.title}>D5</span>
               </Link>
             </div>
-            <div className={styles.desc}>David's Data Driven Dynamic Dashboard</div>
+            <div className={styles.desc}>D5</div>
           </div>
           {children}
         </div>

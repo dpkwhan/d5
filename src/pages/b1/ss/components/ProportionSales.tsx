@@ -7,9 +7,9 @@ import Yuan from '../utils/Yuan';
 import styles from '../style.less';
 
 const ProportionSales = ({
+  loading,
   dropdownGroup,
   salesType,
-  loading,
   salesPieData,
   handleChangeSalesType,
 }: {
@@ -23,10 +23,8 @@ const ProportionSales = ({
     loading={loading}
     className={styles.salesCard}
     bordered={false}
-    title="The Proportion of Sales"
-    style={{
-      height: '100%',
-    }}
+    title="Categories of Sales"
+    style={{ height: '100%' }}
     extra={
       <div className={styles.salesCardExtra}>
         {dropdownGroup}
@@ -40,25 +38,16 @@ const ProportionSales = ({
       </div>
     }
   >
-    <div>
-      <h4
-        style={{
-          marginTop: 8,
-          marginBottom: 32,
-        }}
-      >
-        Sales
-      </h4>
-      <Pie
-        hasLegend
-        subTitle="Sales"
-        total={() => <Yuan>{salesPieData.reduce((pre, now) => now.y + pre, 0)}</Yuan>}
-        data={salesPieData}
-        valueFormat={value => <Yuan>{value}</Yuan>}
-        height={248}
-        lineWidth={4}
-      />
-    </div>
+    <h4 style={{ marginTop: 8, marginBottom: 32 }}>Sales</h4>
+    <Pie
+      hasLegend
+      subTitle="Sales"
+      total={() => <Yuan>{salesPieData.reduce((pre, now) => now.y + pre, 0)}</Yuan>}
+      data={salesPieData}
+      valueFormat={value => <Yuan>{value}</Yuan>}
+      height={248}
+      lineWidth={4}
+    />
   </Card>
 );
 

@@ -162,15 +162,9 @@
       ".git",
       ".github",
       ".gitpod.yml",
-      "CODE_OF_CONDUCT.md",
-      "Dockerfile",
-      "Dockerfile.*",
       "lambda",
-      "LICENSE",
       "netlify.toml",
       "README.*.md",
-      "azure-pipelines.yml",
-      "docker",
       "CNAME",
       "create-umi"
     ]

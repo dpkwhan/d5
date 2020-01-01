@@ -64,20 +64,20 @@ const defaultFooterDom = (
     links={[
       {
         key: 'D5',
-        title: "David's Data Driven Dynamic Dashboard",
-        href: 'https://pro.ant.design',
+        title: 'D5',
+        href: 'https://github.com/dpkwhan/d5',
         blankTarget: true,
       },
       {
         key: 'BitBucket',
         title: <Icon type="github" />,
-        href: 'https://github.com/ant-design/ant-design-pro',
+        href: 'https://github.com/dpkwhan/d5',
         blankTarget: true,
       },
       {
         key: 'SMAD',
-        title: 'Statistical Modelling & Development',
-        href: 'https://ant.design',
+        title: 'SMAD',
+        href: 'https://github.com/dpkwhan/d5',
         blankTarget: true,
       },
     ]}
