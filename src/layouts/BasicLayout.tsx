@@ -9,7 +9,7 @@ import React, { useEffect } from 'react';
 import Link from 'umi/link';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
-import { Icon, Result, Button } from 'antd';
+import { Result, Button } from 'antd';
 import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
 import { ConnectState } from '@/models/connect';
@@ -154,14 +154,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
           },
           ...routers,
         ]}
-        itemRender={(route, params, routes, paths) => {
-          const first = routes.indexOf(route) === 0;
-          return first ? (
-            <Link to={paths.join('/')}>{route.breadcrumbName}</Link>
-          ) : (
-            <span>{route.breadcrumbName}</span>
-          );
-        }}
+        itemRender={() => null}
         footerRender={footerRender}
         menuDataRender={menuDataRender}
         rightContentRender={() => <RightContent />}
