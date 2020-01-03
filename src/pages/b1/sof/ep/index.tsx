@@ -1,4 +1,4 @@
-import { Avatar, Card, Col, Dropdown, Form, Icon, List, Menu, Row, Select, Tooltip } from 'antd';
+import { Avatar, Card, Dropdown, Form, Icon, List, Menu, Tooltip } from 'antd';
 import React, { Component } from 'react';
 
 import { Dispatch } from 'redux';
@@ -7,12 +7,7 @@ import { connect } from 'dva';
 import numeral from 'numeral';
 import { StateType } from './model';
 import { ListItemDataType } from './data.d';
-import StandardFormRow from './components/StandardFormRow';
-import TagSelect from './components/TagSelect';
 import styles from './style.less';
-
-const { Option } = Select;
-const FormItem = Form.Item;
 
 export function formatWan(val: number) {
   const v = val * 1;
@@ -61,9 +56,7 @@ class Applications extends Component<ApplicationsProps> {
     const {
       listAndsearchAndapplications: { list },
       loading,
-      form,
     } = this.props;
-    const { getFieldDecorator } = form;
 
     const CardInfo: React.FC<{
       activeUser: React.ReactNode;
@@ -80,13 +73,6 @@ class Applications extends Component<ApplicationsProps> {
         </div>
       </div>
     );
-
-    const formItemLayout = {
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 },
-      },
-    };
 
     const itemMenu = (
       <Menu>
@@ -110,51 +96,6 @@ class Applications extends Component<ApplicationsProps> {
 
     return (
       <div className={styles.filterCardList}>
-        <Card bordered={false}>
-          <Form layout="inline">
-            <StandardFormRow title="所属类目" block style={{ paddingBottom: 11 }}>
-              <FormItem>
-                {getFieldDecorator('category')(
-                  <TagSelect expandable>
-                    <TagSelect.Option value="cat1">类目一</TagSelect.Option>
-                    <TagSelect.Option value="cat2">类目二</TagSelect.Option>
-                    <TagSelect.Option value="cat3">类目三</TagSelect.Option>
-                  </TagSelect>,
-                )}
-              </FormItem>
-            </StandardFormRow>
-            <StandardFormRow title="其它选项" grid last>
-              <Row gutter={16}>
-                <Col lg={8} md={10} sm={10} xs={24}>
-                  <FormItem {...formItemLayout} label="作者">
-                    {getFieldDecorator(
-                      'author',
-                      {},
-                    )(
-                      <Select placeholder="不限" style={{ maxWidth: 200, width: '100%' }}>
-                        <Option value="lisa">王昭君</Option>
-                      </Select>,
-                    )}
-                  </FormItem>
-                </Col>
-                <Col lg={8} md={10} sm={10} xs={24}>
-                  <FormItem {...formItemLayout} label="好评度">
-                    {getFieldDecorator(
-                      'rate',
-                      {},
-                    )(
-                      <Select placeholder="不限" style={{ maxWidth: 200, width: '100%' }}>
-                        <Option value="good">优秀</Option>
-                        <Option value="normal">普通</Option>
-                      </Select>,
-                    )}
-                  </FormItem>
-                </Col>
-              </Row>
-            </StandardFormRow>
-          </Form>
-        </Card>
-        <br />
         <List<ListItemDataType>
           rowKey="id"
           grid={{ gutter: 24, xl: 4, lg: 3, md: 3, sm: 2, xs: 1 }}
