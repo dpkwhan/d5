@@ -1,35 +1,17 @@
 import { IConfig, IPlugin } from 'umi-types';
-import defaultSettings from './defaultSettings'; // https://umijs.org/config/
-
 import slash from 'slash2';
-const { pwa } = defaultSettings; // preview.pro.ant.design only do not use in your production ;
 
 const plugins: IPlugin[] = [
   [
     'umi-plugin-react',
     {
       antd: true,
-      dva: {
-        hmr: true,
-      },
+      dva: { hmr: true },
       dynamicImport: {
         loadingComponent: './components/PageLoading/index',
         webpackChunkName: true,
         level: 3,
       },
-      pwa: pwa
-        ? {
-            workboxPluginMode: 'InjectManifest',
-            workboxOptions: {
-              importWorkboxFrom: 'local',
-            },
-          }
-        : false, // default close dll, because issue https://github.com/ant-design/ant-design-pro/issues/4665
-      // dll features https://webpack.js.org/plugins/dll-plugin/
-      // dll: {
-      //   include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch'],
-      //   exclude: ['@babel/runtime', 'netlify-lambda'],
-      // },
     },
   ],
   [

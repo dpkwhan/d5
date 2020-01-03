@@ -14,18 +14,9 @@ export interface UserLayoutProps extends ConnectProps {
 }
 
 const UserLayout: React.FC<UserLayoutProps> = props => {
-  const {
-    route = {
-      routes: [],
-    },
-  } = props;
+  const { route = { routes: [] } } = props;
   const { routes = [] } = route;
-  const {
-    children,
-    location = {
-      pathname: '',
-    },
-  } = props;
+  const { children, location = { pathname: '' } } = props;
   const { breadcrumb } = getMenuData(routes);
   const title = getPageTitle({
     pathname: location.pathname,
@@ -52,7 +43,17 @@ const UserLayout: React.FC<UserLayoutProps> = props => {
           </div>
           {children}
         </div>
-        <DefaultFooter />
+        <DefaultFooter
+          copyright="2020 Barclays"
+          links={[
+            {
+              key: 'SMAD',
+              title: 'Statistical Modelling and Development (SMaD)',
+              href: 'https://github.com/dpkwhan/d5',
+              blankTarget: true,
+            },
+          ]}
+        />
       </div>
     </>
   );

@@ -16,7 +16,6 @@ interface LoginProps {
 }
 interface LoginState {
   type: string;
-  autoLogin: boolean;
 }
 export interface FormDataType {
   userName: string;
@@ -44,13 +43,6 @@ class Login extends Component<LoginProps, LoginState> {
 
   state: LoginState = {
     type: 'account',
-    autoLogin: true,
-  };
-
-  changeAutoLogin = (e: CheckboxChangeEvent) => {
-    this.setState({
-      autoLogin: e.target.checked,
-    });
   };
 
   handleSubmit = (err: any, values: FormDataType) => {

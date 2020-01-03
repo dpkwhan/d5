@@ -1,8 +1,3 @@
-/**
- * Ant Design Pro v4 use `@ant-design/pro-layout` to handle Layout.
- * You can view component api by:
- * https://github.com/ant-design/ant-design-pro-layout
- */
 import ProLayout, {
   MenuDataItem,
   BasicLayoutProps as ProLayoutProps,
@@ -60,23 +55,11 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
 
 const defaultFooterDom = (
   <DefaultFooter
-    copyright="2019 Barclays"
+    copyright="2020 Barclays"
     links={[
       {
-        key: 'D5',
-        title: 'D5',
-        href: 'https://github.com/dpkwhan/d5',
-        blankTarget: true,
-      },
-      {
-        key: 'BitBucket',
-        title: <Icon type="github" />,
-        href: 'https://github.com/dpkwhan/d5',
-        blankTarget: true,
-      },
-      {
         key: 'SMAD',
-        title: 'SMAD',
+        title: 'Statistical Modelling and Development (SMaD)',
         href: 'https://github.com/dpkwhan/d5',
         blankTarget: true,
       },

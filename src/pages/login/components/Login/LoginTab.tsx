@@ -47,7 +47,6 @@ const WrapContext: React.FC<TabPaneProps> & {
   </LoginContext.Consumer>
 );
 
-// 标志位 用来判断是不是自定义组件
 WrapContext.typeName = 'LoginTab';
 
 export default WrapContext;

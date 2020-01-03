@@ -64,7 +64,7 @@ class WrapFormItem extends Component<LoginItemProps> {
   };
 
   render() {
-    // 这么写是为了防止restProps中 带入 onChange, defaultValue, rules props tabUtil
+    // To prevent onChange, defaultValue, rules props tabUtil from being introduced by restProps
     const {
       onChange,
       customProps,
