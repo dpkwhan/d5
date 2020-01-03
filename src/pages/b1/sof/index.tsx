@@ -85,6 +85,7 @@ class Search extends Component<SearchProps> {
         tabList={tabList}
         tabActiveKey={this.getTabKey()}
         onTabChange={this.handleTabChange}
+        title={false}
       >
         {children}
       </PageHeaderWrapper>
