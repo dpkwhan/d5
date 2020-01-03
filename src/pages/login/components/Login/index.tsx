@@ -34,14 +34,9 @@ class Login extends Component<LoginProps, LoginState> {
 
   public static Password: React.FunctionComponent<LoginItemProps>;
 
-  public static Mobile: React.FunctionComponent<LoginItemProps>;
-
-  public static Captcha: React.FunctionComponent<LoginItemProps>;
-
   static defaultProps = {
     className: '',
     defaultActiveKey: '',
-    onTabChange: () => {},
     onSubmit: () => {},
   };
 

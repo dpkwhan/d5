@@ -364,10 +364,6 @@
     },
   ];
 
-  function getFakeCaptcha(req, res) {
-    return res.json('captcha-xxx');
-  }
-
   var api = {
     'GET /api/project/notice': getNotice,
     'GET /api/activities': getActivities,
@@ -387,7 +383,6 @@
     }),
     'GET /api/fake_list': getFakeList,
     'POST /api/fake_list': postFakeList,
-    'GET /api/captcha': getFakeCaptcha,
   };
 
   const visitData = [];

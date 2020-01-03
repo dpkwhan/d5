@@ -12,13 +12,6 @@ const plugins: IPlugin[] = [
       dva: {
         hmr: true,
       },
-      locale: {
-        // default false
-        enable: true,
-        default: 'en-US',
-        // default true, when it is true, will use `navigator.language` overwrite default
-        baseNavigator: true,
-      },
       dynamicImport: {
         loadingComponent: './components/PageLoading/index',
         webpackChunkName: true,

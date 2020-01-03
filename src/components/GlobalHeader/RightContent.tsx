@@ -25,7 +25,7 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = props => {
       <Tooltip title="Email for Help">
         <a
           target="_blank"
-          href="mailto:zhaohui.han@gmail.com?subject=Help with D5"
+          href="mailto:david.z.han@outlook.com?subject=Help with D5"
           rel="noopener noreferrer"
           className={styles.action}
         >

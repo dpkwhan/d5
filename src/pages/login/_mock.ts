@@ -1,9 +1,5 @@
 import { Request, Response } from 'express';
 
-function getFakeCaptcha(req: Request, res: Response) {
-  return res.json('captcha-xxx');
-}
-
 export default {
   'POST  /api/login/account': (req: Request, res: Response) => {
     const { password, userName, type } = req.body;
@@ -29,5 +25,4 @@ export default {
       currentAuthority: 'guest',
     });
   },
-  'GET  /api/login/captcha': getFakeCaptcha,
 };

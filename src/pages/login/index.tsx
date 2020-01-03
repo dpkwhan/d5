@@ -21,8 +21,6 @@ interface LoginState {
 export interface FormDataType {
   userName: string;
   password: string;
-  mobile: string;
-  captcha: string;
 }
 
 @connect(
@@ -67,33 +65,6 @@ class Login extends Component<LoginProps, LoginState> {
     }
   };
 
-  onTabChange = (type: string) => {
-    this.setState({
-      type,
-    });
-  };
-
-  onGetCaptcha = () =>
-    new Promise((resolve, reject) => {
-      if (!this.loginForm) {
-        return;
-      }
-
-      this.loginForm.validateFields(['mobile'], {}, (err: any, values: FormDataType) => {
-        if (err) {
-          reject(err);
-        } else {
-          const { dispatch } = this.props;
-          ((dispatch({
-            type: 'userAndlogin/getCaptcha',
-            payload: values.mobile,
-          }) as unknown) as Promise<any>)
-            .then(resolve)
-            .catch(reject);
-        }
-      });
-    });
-
   renderMessage = (content: string) => (
     <Alert
       style={{
@@ -113,7 +84,6 @@ class Login extends Component<LoginProps, LoginState> {
       <div className={styles.main}>
         <LoginComponents
           defaultActiveKey={type}
-          onTabChange={this.onTabChange}
           onSubmit={this.handleSubmit}
           ref={(form: any) => {
             this.loginForm = form;
