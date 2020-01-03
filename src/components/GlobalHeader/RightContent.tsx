@@ -3,7 +3,6 @@ import React from 'react';
 import { connect } from 'dva';
 import { ConnectProps, ConnectState } from '@/models/connect';
 import Avatar from './AvatarDropdown';
-import HeaderSearch from '../HeaderSearch';
 import styles from './index.less';
 import NoticeIconView from './NoticeIconView';
 
@@ -23,26 +22,10 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = props => {
 
   return (
     <div className={className}>
-      <HeaderSearch
-        className={`${styles.action} ${styles.search}`}
-        placeholder="component.globalHeader.search"
-        defaultValue="umi ui"
-        dataSource={[
-          'component.globalHeader.search.example1',
-          'component.globalHeader.search.example2',
-          'component.globalHeader.search.example3',
-        ]}
-        onSearch={value => {
-          console.log('input', value);
-        }}
-        onPressEnter={value => {
-          console.log('enter', value);
-        }}
-      />
-      <Tooltip title="component.globalHeader.help">
+      <Tooltip title="Email for Help">
         <a
           target="_blank"
-          href="https://pro.ant.design/docs/getting-started"
+          href="mailto:zhaohui.han@gmail.com?subject=Help with D5"
           rel="noopener noreferrer"
           className={styles.action}
         >

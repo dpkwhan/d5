@@ -97,9 +97,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
   };
 
   getUnreadData = (noticeData: { [key: string]: NoticeItem[] }) => {
-    const unreadMsg: {
-      [key: string]: number;
-    } = {};
+    const unreadMsg: { [key: string]: number } = {};
     Object.keys(noticeData).forEach(key => {
       const value = noticeData[key];
 
@@ -118,6 +116,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
     const { currentUser, fetchingNotices, onNoticeVisibleChange } = this.props;
     const noticeData = this.getNoticeData();
     const unreadMsg = this.getUnreadData(noticeData);
+
     return (
       <NoticeIcon
         className={styles.action}
@@ -126,8 +125,8 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
           this.changeReadState(item as NoticeItem);
         }}
         loading={fetchingNotices}
-        clearText="component.noticeIcon.clear"
-        viewMoreText="component.noticeIcon.view-more"
+        clearText="Clear "
+        viewMoreText="View More"
         onClear={this.handleNoticeClear}
         onPopupVisibleChange={onNoticeVisibleChange}
         onViewMore={() => message.info('Click on view more')}
@@ -137,7 +136,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
           tabKey="notification"
           count={unreadMsg.notification}
           list={noticeData.notification}
-          title="component.globalHeader.notification"
+          title="Notification"
           emptyText="component.globalHeader.notification.empty"
           showViewMore
         />
@@ -145,13 +144,13 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
           tabKey="message"
           count={unreadMsg.message}
           list={noticeData.message}
-          title="component.globalHeader.message"
+          title="Message"
           emptyText="component.globalHeader.message.empty"
           showViewMore
         />
         <NoticeIcon.Tab
           tabKey="event"
-          title="component.globalHeader.event"
+          title="Event"
           emptyText="component.globalHeader.event.empty"
           count={unreadMsg.event}
           list={noticeData.event}

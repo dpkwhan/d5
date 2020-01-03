@@ -22,12 +22,6 @@ export interface IOfflineChartData {
   y2: number;
 }
 
-export interface IRadarData {
-  name: string;
-  label: string;
-  value: number;
-}
-
 export interface IPerformanceData {
   visitData: IVisitData[];
   visitData2: IVisitData[];
@@ -38,5 +32,4 @@ export interface IPerformanceData {
   salesTypeData: IVisitData[];
   salesTypeDataOnline: IVisitData[];
   salesTypeDataOffline: IVisitData[];
-  radarData: IRadarData[];
 }
