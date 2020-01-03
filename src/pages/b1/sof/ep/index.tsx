@@ -27,7 +27,7 @@ export function formatWan(val: number) {
             marginLeft: 2,
           }}
         >
-          万
+          Million
         </span>
       </span>
     );
@@ -37,7 +37,7 @@ export function formatWan(val: number) {
 
 interface ApplicationsProps extends FormComponentProps {
   dispatch: Dispatch<any>;
-  listAndsearchAndapplications: StateType;
+  b1SofExecutionProgress: StateType;
   loading: boolean;
 }
 
@@ -45,7 +45,7 @@ class Applications extends Component<ApplicationsProps> {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch({
-      type: 'listAndsearchAndapplications/fetch',
+      type: 'b1SofExecutionProgress/fetch',
       payload: {
         count: 8,
       },
@@ -54,7 +54,7 @@ class Applications extends Component<ApplicationsProps> {
 
   render() {
     const {
-      listAndsearchAndapplications: { list },
+      b1SofExecutionProgress: { list },
       loading,
     } = this.props;
 
@@ -142,7 +142,7 @@ const WarpForm = Form.create<ApplicationsProps>({
     // 表单项变化时请求数据
     // 模拟查询表单生效
     dispatch({
-      type: 'listAndsearchAndapplications/fetch',
+      type: 'b1SofExecutionProgress/fetch',
       payload: {
         count: 8,
       },
@@ -152,13 +152,13 @@ const WarpForm = Form.create<ApplicationsProps>({
 
 export default connect(
   ({
-    listAndsearchAndapplications,
+    b1SofExecutionProgress,
     loading,
   }: {
-    listAndsearchAndapplications: StateType;
+    b1SofExecutionProgress: StateType;
     loading: { models: { [key: string]: boolean } };
   }) => ({
-    listAndsearchAndapplications,
-    loading: loading.models.listAndsearchAndapplications,
+    b1SofExecutionProgress,
+    loading: loading.models.b1SofExecutionProgress,
   }),
 )(WarpForm);

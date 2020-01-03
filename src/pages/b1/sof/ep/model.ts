@@ -25,7 +25,7 @@ export interface ModelType {
 }
 
 const Model: ModelType = {
-  namespace: 'listAndsearchAndapplications',
+  namespace: 'b1SofExecutionProgress',
 
   state: {
     list: [],
