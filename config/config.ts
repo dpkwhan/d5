@@ -14,15 +14,6 @@ const plugins: IPlugin[] = [
       },
     },
   ],
-  [
-    'umi-plugin-pro-block',
-    {
-      moveMock: false,
-      moveService: false,
-      modifyRequest: true,
-      autoAddMenu: true,
-    },
-  ],
 ];
 
 export default {
@@ -114,10 +105,6 @@ export default {
       ],
     },
   ],
-  // Theme for antd: https://ant.design/docs/react/customize-theme-cn
-  theme: {
-    // ...darkTheme,
-  },
   ignoreMomentLocale: true,
   lessLoaderOptions: {
     javascriptEnabled: true,
