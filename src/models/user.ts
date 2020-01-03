@@ -9,10 +9,6 @@ export interface CurrentUser {
   title?: string;
   group?: string;
   signature?: string;
-  tags?: {
-    key: string;
-    label: string;
-  }[];
   userid?: string;
   unreadCount?: number;
 }

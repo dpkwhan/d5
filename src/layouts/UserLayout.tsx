@@ -48,7 +48,7 @@ const UserLayout: React.FC<UserLayoutProps> = props => {
                 <span className={styles.title}>D5</span>
               </Link>
             </div>
-            <div className={styles.desc}>D5</div>
+            <div className={styles.desc}>David&apos;s Data Driven Dynamic Dashboard</div>
           </div>
           {children}
         </div>

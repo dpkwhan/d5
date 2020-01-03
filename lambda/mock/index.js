@@ -372,15 +372,6 @@
         message: 'Ok',
       });
     },
-    'GET /api/tags': mockjs.mock({
-      'list|100': [
-        {
-          name: '@city',
-          'value|1-100': 150,
-          'type|0-2': 1,
-        },
-      ],
-    }),
     'GET /api/fake_list': getFakeList,
     'POST /api/fake_list': postFakeList,
   };
@@ -2068,32 +2059,6 @@
       signature: '海纳百川，有容乃大',
       title: 'Director',
       group: 'SMAD Equities',
-      tags: [
-        {
-          key: '0',
-          label: '很有想法的',
-        },
-        {
-          key: '1',
-          label: '专注设计',
-        },
-        {
-          key: '2',
-          label: '辣~',
-        },
-        {
-          key: '3',
-          label: '大长腿',
-        },
-        {
-          key: '4',
-          label: '川妹子',
-        },
-        {
-          key: '5',
-          label: '海纳百川',
-        },
-      ],
       notice: [
         {
           id: 'xxx1',
