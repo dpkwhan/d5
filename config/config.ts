@@ -77,12 +77,6 @@ export default {
                       component: './b1/sof/ep',
                     },
                     {
-                      name: 'Volume Profiles',
-                      icon: 'smile',
-                      path: '/b1/sof/vp',
-                      component: './b1/sof/vp',
-                    },
-                    {
                       name: 'Venue Stats',
                       icon: 'smile',
                       path: '/b1/sof/vs',

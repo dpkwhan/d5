@@ -24,9 +24,9 @@ class Search extends Component<SearchProps> {
       case 'ep':
         router.push(`${url}/ep`);
         break;
-      case 'vp':
-        router.push(`${url}/vp`);
-        break;
+      // case 'vp':
+      //   router.push(`${url}/vp`);
+      //   break;
       case 'vs':
         router.push(`${url}/vs`);
         break;
@@ -55,10 +55,10 @@ class Search extends Component<SearchProps> {
         key: 'ep',
         tab: 'Execution Progress',
       },
-      {
-        key: 'vp',
-        tab: 'Volume Profiles',
-      },
+      // {
+      //   key: 'vp',
+      //   tab: 'Volume Profiles',
+      // },
       {
         key: 'vs',
         tab: 'Venue Stats',
