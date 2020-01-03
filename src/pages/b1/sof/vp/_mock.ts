@@ -48,7 +48,7 @@ const user = [
   '仲尼',
 ];
 
-function fakeList(count: number): ListItemDataType[] {
+function fakeListVP(count: number): ListItemDataType[] {
   const list = [];
   for (let i = 0; i < count; i += 1) {
     list.push({
@@ -100,15 +100,15 @@ function fakeList(count: number): ListItemDataType[] {
   return list;
 }
 
-function getFakeList(req: Request, res: Response) {
+function getFakeListVP(req: Request, res: Response) {
   const params = req.query;
 
   const count = params.count * 1 || 20;
 
-  const result = fakeList(count);
+  const result = fakeListVP(count);
   return res.json(result);
 }
 
 export default {
-  'GET  /api/fake_list': getFakeList,
+  'GET  /api/fake_list': getFakeListVP,
 };
