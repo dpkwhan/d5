@@ -76,12 +76,12 @@ export default {
                       path: '/b1/sof/ep',
                       component: './b1/sof/ep',
                     },
-                    {
-                      name: 'Venue Stats',
-                      icon: 'smile',
-                      path: '/b1/sof/vs',
-                      component: './b1/sof/vs',
-                    },
+                    // {
+                    //   name: 'Venue Stats',
+                    //   icon: 'smile',
+                    //   path: '/b1/sof/vs',
+                    //   component: './b1/sof/vs',
+                    // },
                   ],
                 },
               ],
