@@ -1,4 +1,4 @@
-import { Avatar, Card, Dropdown, Form, Icon, List, Menu, Tooltip } from 'antd';
+import { Avatar, Card, Form, Icon, List, Tooltip } from 'antd';
 import React, { Component } from 'react';
 
 import { Dispatch } from 'redux';
