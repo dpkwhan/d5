@@ -64,11 +64,11 @@ class Applications extends Component<ApplicationsProps> {
     }> = ({ activeUser, newUser }) => (
       <div className={styles.cardInfo}>
         <div>
-          <p>活跃用户</p>
+          <p>Active Users</p>
           <p>{activeUser}</p>
         </div>
         <div>
-          <p>新增用户</p>
+          <p>New Users</p>
           <p>{newUser}</p>
         </div>
       </div>
@@ -87,13 +87,13 @@ class Applications extends Component<ApplicationsProps> {
                 hoverable
                 bodyStyle={{ paddingBottom: 20 }}
                 actions={[
-                  <Tooltip key="download" title="下载">
+                  <Tooltip key="download" title="Download">
                     <Icon type="download" />
                   </Tooltip>,
-                  <Tooltip key="edit" title="编辑">
+                  <Tooltip key="edit" title="Edit">
                     <Icon type="edit" />
                   </Tooltip>,
-                  <Tooltip title="分享" key="share">
+                  <Tooltip title="Share" key="share">
                     <Icon type="share-alt" />
                   </Tooltip>,
                 ]}
