@@ -6,7 +6,7 @@ import { FormComponentProps } from 'antd/es/form';
 import { connect } from 'dva';
 import numeral from 'numeral';
 import { StateType } from './model';
-import { ListItemDataType } from './data.d';
+import { IListItemData } from './data.d';
 import styles from './style.less';
 
 export function formatWan(val: number) {
@@ -47,7 +47,7 @@ class Applications extends Component<ApplicationsProps> {
     dispatch({
       type: 'b1SofExecutionProgress/fetch',
       payload: {
-        count: 8,
+        count: 6,
       },
     });
   }
@@ -74,29 +74,9 @@ class Applications extends Component<ApplicationsProps> {
       </div>
     );
 
-    const itemMenu = (
-      <Menu>
-        <Menu.Item>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.alipay.com/">
-            1st menu item
-          </a>
-        </Menu.Item>
-        <Menu.Item>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.taobao.com/">
-            2nd menu item
-          </a>
-        </Menu.Item>
-        <Menu.Item>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.tmall.com/">
-            3d menu item
-          </a>
-        </Menu.Item>
-      </Menu>
-    );
-
     return (
       <div className={styles.filterCardList}>
-        <List<ListItemDataType>
+        <List<IListItemData>
           rowKey="id"
           grid={{ gutter: 24, xl: 4, lg: 3, md: 3, sm: 2, xs: 1 }}
           loading={loading}
@@ -116,9 +96,6 @@ class Applications extends Component<ApplicationsProps> {
                   <Tooltip title="分享" key="share">
                     <Icon type="share-alt" />
                   </Tooltip>,
-                  <Dropdown key="ellipsis" overlay={itemMenu}>
-                    <Icon type="ellipsis" />
-                  </Dropdown>,
                 ]}
               >
                 <Card.Meta avatar={<Avatar size="small" src={item.avatar} />} title={item.title} />

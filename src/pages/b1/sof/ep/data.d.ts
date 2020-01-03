@@ -1,4 +1,4 @@
-export interface ListItemDataType {
+export interface IListItemData {
   id: string;
   title: string;
   avatar: string;

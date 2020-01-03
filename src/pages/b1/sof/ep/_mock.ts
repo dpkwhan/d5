@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { ListItemDataType } from './data.d';
+import { IListItemData } from './data.d';
 
 const titles = [
   'Alipay',
@@ -23,7 +23,7 @@ const avatars = [
   'https://gw.alipayobjects.com/zos/rmsportal/nxkuOJlFJuAUhzlMTCEe.png', // Webpack
 ];
 
-function fakeList(count: number): ListItemDataType[] {
+function fakeList(count: number): IListItemData[] {
   const list = [];
   for (let i = 0; i < count; i += 1) {
     list.push({
@@ -40,7 +40,7 @@ function fakeList(count: number): ListItemDataType[] {
 
 function getFakeList(req: Request, res: Response) {
   const params = req.query;
-  const count = params.count * 1 || 6;
+  const count = params.count * 1 || 8;
   const result = fakeList(count);
   return res.json(result);
 }

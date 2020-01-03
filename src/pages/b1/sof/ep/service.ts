@@ -1,7 +1,7 @@
 import request from '@/utils/request';
-import { ListItemDataType } from './data.d';
+import { IListItemData } from './data.d';
 
-export async function queryFakeList(params: ListItemDataType) {
+export async function queryFakeList(params: IListItemData) {
   return request('/api/fake_list', {
     params,
   });

@@ -1,11 +1,11 @@
 import { AnyAction, Reducer } from 'redux';
 
 import { EffectsCommandMap } from 'dva';
-import { ListItemDataType } from './data.d';
+import { IListItemData } from './data.d';
 import { queryFakeList } from './service';
 
 export interface StateType {
-  list: ListItemDataType[];
+  list: IListItemData[];
 }
 
 export type Effect = (
