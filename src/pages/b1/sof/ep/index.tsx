@@ -8,6 +8,7 @@ import numeral from 'numeral';
 import { StateType } from './model';
 import { IListItemData } from './data.d';
 import styles from './style.less';
+import UseKdbDemo from './UseKdbDemo';
 
 export function formatWan(val: number) {
   const v = val * 1;
@@ -109,6 +110,8 @@ class Applications extends Component<ApplicationsProps> {
             </List.Item>
           )}
         />
+
+        <UseKdbDemo />
       </div>
     );
   }
