@@ -9,6 +9,7 @@ import { StateType } from './model';
 import { IListItemData } from './data.d';
 import styles from './style.less';
 import UseKdbDemo from './UseKdbDemo';
+import ChartDemo from './ChartDemo';
 
 export function formatWan(val: number) {
   const v = val * 1;
@@ -112,6 +113,7 @@ class Applications extends Component<ApplicationsProps> {
         />
 
         <UseKdbDemo />
+        <ChartDemo />
       </div>
     );
   }
